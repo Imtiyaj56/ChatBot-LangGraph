@@ -25,7 +25,7 @@ def chat_node(state: ChatStats):
 
 #Creating Graph
 graph = StateGraph(ChatStats)
-checkpointer = InMemorySaver()
+checkpointer = InMemorySaver()   #CheckPointer
 
 
 #Creating Node
@@ -39,3 +39,4 @@ graph.add_edge('chat_node', END)
 
 #Compiling the graph
 chatbot = graph.compile(checkpointer=checkpointer)
+
